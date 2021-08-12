@@ -7,7 +7,8 @@
     tools:context=".activity.MainActivity">
 
     <View
-        android:layout_width="1dp"
+        android:id="@+id/line_main"
+        android:layout_width="0.5dp"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
         android:background="#8B8B8B"
@@ -16,11 +17,30 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_margin="20dp"
-        android:background="@drawable/K2i"
+        android:background="@drawable/icon_fti"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cnb_iconSize="23dp"
+        app:cnb_menuResource="@menu/bottom_menu"
+        app:cnb_orientationMode="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/line_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line_main"
         app:layout_constraintTop_toTopOf="parent" />
 
 
