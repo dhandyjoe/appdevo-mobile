@@ -4,28 +4,28 @@
     app:cnb_unselectedColor="#8F8F8F">
 
     <item
-        android:id="menuNews"
+        android:id="@+id/menuNews"
         android:enabled="true"
         android:icon="@drawable/newspaper"
         android:title="News"
         app:cnb_iconColor="#517ABF"/>
 
     <item
-        android:id="menuEvent"
+        android:id="@+id/menuEvents"
         android:enabled="true"
         android:icon="@drawable/event"
         android:title="Events"
         app:cnb_iconColor="#517ABF"/>
 
     <item
-        android:id="menuCommittee"
+        android:id="@+id/menuCommittee"
         android:enabled="true"
         android:icon="@drawable/committee"
         android:title="Committee"
         app:cnb_iconColor="#517ABF"/>
 
     <item
-        android:id="menuSetting"
+        android:id="@+id/menuSetting"
         android:enabled="true"
         android:icon="@drawable/setting"
         android:title="Setting"

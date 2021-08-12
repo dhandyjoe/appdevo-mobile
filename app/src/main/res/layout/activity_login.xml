@@ -31,7 +31,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
             android:text="Welcome back,"
             android:textColor="@color/purple_500"
             android:textSize="20sp"
@@ -41,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-10dp"
             android:layout_marginBottom="10dp"
-            android:fontFamily="@font/montserrat"
             android:text="Sign In!"
             android:textColor="@color/purple_500"
             android:textSize="30sp"
@@ -78,6 +76,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            android:id="@+id/tv_forgetPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forget Password?"
@@ -87,12 +86,13 @@
             android:layout_marginBottom="20dp"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SIGN IN" />
 
         <TextView
+            android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
