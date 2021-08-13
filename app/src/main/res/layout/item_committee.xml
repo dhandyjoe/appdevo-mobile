@@ -7,7 +7,7 @@
     android:padding="10dp">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_committee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Youth Leadership"
@@ -18,15 +18,17 @@
 
 
     <TextView
+        android:id="@+id/descCommittee"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Youth Leadership merupakan program pengembangan skill kepemimpinan yang ditujukan untuk mahasiswa Indonesia."
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_committee" />
 
     <Button
+        android:id="@+id/btn_directLinkCommittee"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/purple_700"
