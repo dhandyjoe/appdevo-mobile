@@ -19,7 +19,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +52,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <EditText
+                android:id="@+id/tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="NAME"/>
@@ -67,9 +68,10 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <EditText
+                android:id="@+id/tv_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="NIM"/>
+                android:hint="EMAIL"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,14 +84,15 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <EditText
+                android:id="@+id/tv_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"/>
+                android:hint="PASSWORD"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/purple_700"
