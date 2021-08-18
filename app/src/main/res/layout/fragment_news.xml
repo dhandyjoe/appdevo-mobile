@@ -24,7 +24,6 @@
             android:id="@+id/rv_shimmer_news"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:listitem="@layout/item_shimmer_news"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tv_status"

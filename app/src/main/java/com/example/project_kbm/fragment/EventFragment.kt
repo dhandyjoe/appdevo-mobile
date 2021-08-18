@@ -2,11 +2,16 @@ package com.example.project_kbm.fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridLayout
+import android.widget.GridView
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.project_kbm.R
 import com.example.project_kbm.activity.EventDetailActivity
 import com.example.project_kbm.adapter.EventsAdapter
 import com.example.project_kbm.adapter.NewsAdapter
@@ -44,9 +49,19 @@ class EventFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentEventBinding.inflate(inflater, container, false)
         eventList = DataEvents.getEventList()
+
+        binding.rvShimmerEvent.showShimmer()
+
+
+        val handler = Handler()
+        handler.postDelayed({
+            binding.rvShimmerEvent.hideShimmer()
+            binding.rvShimmerEvent.visibility = View.GONE
+            binding.rvEvent.visibility = View.VISIBLE
+        }, 3000)
 
         showRecycleView()
 
@@ -63,7 +78,6 @@ class EventFragment : Fragment() {
                 val intent = Intent(context, EventDetailActivity::class.java)
                 startActivity(intent)
             }
-
         })
     }
 
