@@ -2,12 +2,14 @@ package com.example.project_kbm.fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project_kbm.activity.EventDetailActivity
+import com.example.project_kbm.activity.LoginActivity
 import com.example.project_kbm.adapter.NewsAdapter
 import com.example.project_kbm.database.DataNews
 import com.example.project_kbm.databinding.FragmentNewsBinding
@@ -44,6 +46,14 @@ class NewsFragment : Fragment() {
     ): View {
         binding = FragmentNewsBinding.inflate(inflater, container, false)
         newsList = DataNews.getNewsList()
+        binding.rvShimmerNews.startShimmer()
+
+        val handler = Handler()
+        handler.postDelayed({
+            binding.rvShimmerNews.stopShimmer()
+            binding.rvShimmerNews.visibility = View.GONE
+            binding.rvNews.visibility = View.VISIBLE
+        }, 3000)
 
         showRecycleView()
 

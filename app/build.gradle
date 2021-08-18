@@ -69,4 +69,6 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-firestore-ktx'
 
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
 }
