@@ -2,6 +2,7 @@ package com.example.project_kbm.fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -48,6 +49,15 @@ class CommitteeFragment : Fragment() {
     ): View? {
         binding = FragmentCommitteeBinding.inflate(inflater, container, false)
         committeeList = DataCommittee.getCommitteeList()
+
+        binding.rvShimmerCommittee.startShimmer()
+
+        val handler = Handler()
+        handler.postDelayed({
+            binding.rvShimmerCommittee.stopShimmer()
+            binding.rvShimmerCommittee.visibility = View.GONE
+            binding.rvCommittee.visibility = View.VISIBLE
+        }, 3000)
 
         showRecycleView()
 
