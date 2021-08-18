@@ -1,12 +1,21 @@
 package com.example.project_kbm.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project_kbm.R
+import com.example.project_kbm.activity.EventDetailActivity
+import com.example.project_kbm.adapter.CommitteeAdapter
+import com.example.project_kbm.adapter.EventsAdapter
+import com.example.project_kbm.database.DataCommittee
 import com.example.project_kbm.databinding.FragmentCommitteeBinding
+import com.example.project_kbm.model.ModelCommittee
+import com.example.project_kbm.model.ModelEvent
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,6 +32,7 @@ class CommitteeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var binding: FragmentCommitteeBinding
+    private var committeeList: ArrayList<ModelCommittee>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +47,17 @@ class CommitteeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCommitteeBinding.inflate(inflater, container, false)
+        committeeList = DataCommittee.getCommitteeList()
 
+        showRecycleView()
 
         return binding.root
+    }
+
+    private fun showRecycleView() {
+        binding.rvCommittee.layoutManager = LinearLayoutManager(activity)
+        val data = CommitteeAdapter(committeeList!!, requireActivity())
+        binding.rvCommittee.adapter = data
     }
 
     companion object {

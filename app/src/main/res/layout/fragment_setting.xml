@@ -78,6 +78,12 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:text="Request Transkrip Nilai"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/purple_700"
             android:text="LOGOUT"/>
 

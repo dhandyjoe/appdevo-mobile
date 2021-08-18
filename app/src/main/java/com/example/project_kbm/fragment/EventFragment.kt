@@ -55,7 +55,7 @@ class EventFragment : Fragment() {
 
     private fun showRecycleView() {
         binding.rvEvent.layoutManager = GridLayoutManager(context, 2)
-        val data = EventsAdapter(eventList!!)
+        val data = EventsAdapter(eventList!!, requireActivity())
         binding.rvEvent.adapter = data
 
         data.setOnClickListener(object : EventsAdapter.OnClickListener {

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.project_kbm.activity.EventDetailActivity
 import com.example.project_kbm.adapter.NewsAdapter
 import com.example.project_kbm.database.DataNews
 import com.example.project_kbm.databinding.FragmentNewsBinding
@@ -56,7 +57,7 @@ class NewsFragment : Fragment() {
 
         data.setOnClickListener(object : NewsAdapter.OnClickListener {
             override fun onClick(position: Int, model: ModelNews) {
-                val intent = Intent(context, NewsDetailFragment::class.java)
+                val intent = Intent(activity, NewsDetailFragment::class.java)
                 startActivity(intent)
             }
         })
