@@ -6,10 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.project_kbm.R
 import com.example.project_kbm.activity.LoginActivity
+import com.example.project_kbm.activity.MainActivity
 import com.example.project_kbm.databinding.FragmentProfileBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -29,8 +33,8 @@ class SettingFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var binding: FragmentProfileBinding
-    private val firebaseAuth = Firebase.auth
-//    private val signInAccount = GoogleSignIn.getLastSignedInAccount(requireContext())
+    private lateinit var mGoogleSignInClient: GoogleSignInClient
+    private val signInAccount = GoogleSignIn.getLastSignedInAccount()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,15 +50,25 @@ class SettingFragment : Fragment() {
     ): View? {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
 
-//        if (signInAccount != null) {
-//            binding.etNameProfile.setText(signInAccount.displayName)
-//            binding.etEmailProfile.setText(signInAccount.email)
-//        }
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.web_client_id))
+            .requestEmail()
+            .build()
+
+        mGoogleSignInClient = GoogleSignIn.getClient(activity, gso)
+
+        if (signInAccount != null) {
+            binding.etNameProfile.setText(signInAccount.displayName)
+            binding.etEmailProfile.setText(signInAccount.email)
+        }
 
         binding.btnLogout.setOnClickListener {
-            firebaseAuth.signOut()
-            val intent = Intent(activity, LoginActivity::class.java)
-            startActivity(intent)
+            mGoogleSignInClient.signOut()
+                .addOnCompleteListener {
+                    Toast.makeText(activity, "berhasil", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(activity, LoginActivity::class.java)
+                    startActivity(intent)
+                }
         }
 
 
