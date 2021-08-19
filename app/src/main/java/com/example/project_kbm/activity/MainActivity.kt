@@ -7,10 +7,7 @@ import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import com.example.project_kbm.R
 import com.example.project_kbm.databinding.ActivityMainBinding
-import com.example.project_kbm.fragment.CommitteeFragment
-import com.example.project_kbm.fragment.EventFragment
-import com.example.project_kbm.fragment.NewsFragment
-import com.example.project_kbm.fragment.SettingFragment
+import com.example.project_kbm.fragment.*
 import com.ismaeldivita.chipnavigation.ChipNavigationBar
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.menuNews -> setupFragment(NewsFragment())
                     R.id.menuEvents -> setupFragment(EventFragment())
                     R.id.menuCommittee -> setupFragment(CommitteeFragment())
+                    R.id.menuAction -> setupFragment(ActionFragment())
                     R.id.menuSetting -> setupFragment(SettingFragment())
                 }
             }

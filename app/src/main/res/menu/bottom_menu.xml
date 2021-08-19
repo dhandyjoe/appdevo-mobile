@@ -25,6 +25,13 @@
         app:cnb_iconColor="#517ABF"/>
 
     <item
+        android:id="@+id/menuAction"
+        android:enabled="true"
+        android:icon="@drawable/action"
+        android:title="Action"
+        app:cnb_iconColor="#517ABF"/>
+
+    <item
         android:id="@+id/menuSetting"
         android:enabled="true"
         android:icon="@drawable/setting"

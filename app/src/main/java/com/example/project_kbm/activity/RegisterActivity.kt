@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.example.project_kbm.R
+import com.example.project_kbm.database.Constants.DATA_USERS
 import com.example.project_kbm.databinding.ActivityRegisterBinding
 import com.example.project_kbm.model.User
 import com.google.firebase.auth.FirebaseAuth
@@ -15,7 +16,6 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private var firebaseAuth = FirebaseAuth.getInstance()
     private var firebaseDB = FirebaseFirestore.getInstance()
-    val DATA_USERS = "Users"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +24,7 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.btnRegister.setOnClickListener {
             register()
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 
@@ -37,8 +38,6 @@ class RegisterActivity : AppCompatActivity() {
                     val email = binding.tvEmail.text.toString()
                     val user = User(name, email)
                     firebaseDB.collection(DATA_USERS).document(firebaseAuth.uid!!).set(user)
-
-                    startActivity(Intent(this, LoginActivity::class.java))
                 }
             }
             .addOnFailureListener {

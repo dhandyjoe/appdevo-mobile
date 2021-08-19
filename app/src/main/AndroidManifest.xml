@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project_kbm">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_fti_update"
@@ -9,6 +11,9 @@
         android:roundIcon="@mipmap/ic_fti_update_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_KBM">
+        <activity
+            android:name=".activity.NewsDetailActivity"
+            android:exported="true" />
         <activity android:name=".activity.EventDetailActivity" />
         <activity android:name=".activity.ForgetPasswordActivity" />
         <activity android:name=".activity.RegisterActivity" />

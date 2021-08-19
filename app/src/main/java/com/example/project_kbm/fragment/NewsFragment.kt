@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project_kbm.activity.EventDetailActivity
 import com.example.project_kbm.activity.LoginActivity
+import com.example.project_kbm.activity.NewsDetailActivity
 import com.example.project_kbm.adapter.NewsAdapter
 import com.example.project_kbm.database.DataNews
 import com.example.project_kbm.databinding.FragmentNewsBinding
@@ -67,13 +68,15 @@ class NewsFragment : Fragment() {
 
         data.setOnClickListener(object : NewsAdapter.OnClickListener {
             override fun onClick(position: Int, model: ModelNews) {
-                val intent = Intent(activity, NewsDetailFragment::class.java)
+                val intent = Intent(activity, NewsDetailActivity::class.java)
+                intent.putExtra(NEWS_DETAIL, model)
                 startActivity(intent)
             }
         })
     }
 
     companion object {
+        val NEWS_DETAIL = "news_detail"
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
