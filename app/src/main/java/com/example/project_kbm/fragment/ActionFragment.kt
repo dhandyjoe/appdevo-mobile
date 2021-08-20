@@ -1,5 +1,8 @@
 package com.example.project_kbm.fragment
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,6 +27,7 @@ class ActionFragment : Fragment() {
     private var param2: String? = null
     private lateinit var binding: FragmentActionBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -36,10 +40,15 @@ class ActionFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val thisContext = container!!.context
         binding = FragmentActionBinding.inflate(inflater, container, false)
 
 
-        binding.btnReq
+        binding.btnRequestTranskrip.setOnClickListener() {requestTranskrip()}
+        binding.btnValidasiPembayaran.setOnClickListener() {validasiPembayaran()}
+        binding.btnStars.setOnClickListener() {starsUKSW(thisContext)}
+        binding.btnSiasat.setOnClickListener() {siasat(thisContext)}
+        binding.btnRepo.setOnClickListener() {repoUKSW(thisContext)}
 
         return binding.root
     }
@@ -62,5 +71,48 @@ class ActionFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    private fun validasiPembayaran() {
+        val recipient = arrayOf("bak@adm.uksw.edu")
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.data = Uri.parse("mailto:");
+        intent.type = "text/plain"
+        intent.putExtra(Intent.EXTRA_EMAIL, recipient)
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Validasi Bukti Bayar Tagihan Kuliah ");
+        intent.putExtra(Intent.EXTRA_TEXT, "Selamat pagi, berikut saya lampirkan sebagai validasi dan bukti bayar tagihan semester kuliah\n" +
+                "\n" +
+                "Terimakasih\n" +
+                "\n" +
+                "NIM : 682018034");
+        startActivity(Intent.createChooser(intent, "Choose"))
+    }
+
+    private fun requestTranskrip() {
+        val recipient = arrayOf("baa.nilai@uksw.edu")
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.data = Uri.parse("mailto:");
+        intent.type = "text/plain"
+        intent.putExtra(Intent.EXTRA_EMAIL, recipient)
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Permintaan Cetak Transkrip Nilai ");
+        startActivity(Intent.createChooser(intent, "Choose"))
+    }
+
+    private fun starsUKSW(thisContext: Context?) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://stars.uksw.edu/")
+        thisContext!!.startActivity(intent)
+    }
+
+    private fun siasat(thisContext: Context?) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://siasat.uksw.edu/")
+        thisContext!!.startActivity(intent)
+    }
+
+    private fun repoUKSW(thisContext: Context?) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://repository.uksw.edu/")
+        thisContext!!.startActivity(intent)
     }
 }

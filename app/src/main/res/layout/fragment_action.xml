@@ -18,11 +18,42 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_req"
+        android:id="@+id/btn_requestTranskrip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="request transkrip nilai"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_status" />
 
+    <Button
+        android:id="@+id/btn_validasiPembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validasi Pembayaran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_requestTranskrip" />
+
+    <Button
+        android:id="@+id/btn_stars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stars Uksw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_validasiPembayaran" />
+
+    <Button
+        android:id="@+id/btn_siasat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIASAT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_stars" />
+
+    <Button
+        android:id="@+id/btn_repo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repository UKSW"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_siasat" />
 </androidx.constraintlayout.widget.ConstraintLayout>
