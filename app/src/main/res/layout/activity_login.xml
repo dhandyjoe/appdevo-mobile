@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome back,"
+            android:text="Welcome,"
             android:textColor="@color/purple_500"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -57,7 +57,7 @@
                 android:id="@+id/tv_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="EMAIL" />
+                android:hint="Email" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,7 +85,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:text="Forget Password?"
-            android:textColor="#FF7A00" />
+            android:textColor="@color/purple_200" />
 
         <Button
             android:id="@+id/btn_login"
@@ -94,22 +94,33 @@
             android:text="SIGN IN" />
 
         <TextView
-            android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="don’t have account?"
-            android:textAlignment="center"
-            android:textColor="@color/purple_200"
-            android:textStyle="bold" />
+            android:layout_marginTop="20dp"
+            android:text="Log in with"/>
 
         <Button
             android:id="@+id/btn_login_google"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/google_plus"
+            android:drawablePadding="10dp"
+            android:drawableTint="#fff"
+            android:backgroundTint="@color/purple_200"
             android:text="Google" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/tv_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/purple_700"
+            android:text="Sign UP"
+            android:textAlignment="center" />
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

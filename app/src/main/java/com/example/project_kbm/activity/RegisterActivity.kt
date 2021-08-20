@@ -22,6 +22,9 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.purple_700)
+
         binding.btnRegister.setOnClickListener {
             register()
             startActivity(Intent(this, LoginActivity::class.java))

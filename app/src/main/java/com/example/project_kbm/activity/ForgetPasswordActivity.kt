@@ -16,6 +16,9 @@ class ForgetPasswordActivity : AppCompatActivity() {
         binding = ActivityForgetPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.purple_200)
+
         binding.btnSend.setOnClickListener {
             if (binding.evForgetPassword.text.isEmpty()) {
                 Toast.makeText(this, "Please enter email address.", Toast.LENGTH_SHORT).show()
