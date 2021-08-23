@@ -22,17 +22,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/sv_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_view_event"
+            android:layout_margin="10dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="Enter Event"
+            app:queryBackground="@color/transparent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status"/>
+
+
         <com.todkars.shimmer.ShimmerRecyclerView
             android:id="@+id/rv_shimmer_event"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
+            android:layout_marginTop="10dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:shimmer_recycler_layout="@layout/item_shimmer_events"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_status" >
+            app:layout_constraintTop_toBottomOf="@+id/sv_event" >
 
         </com.todkars.shimmer.ShimmerRecyclerView>
 
@@ -43,11 +56,13 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:numColumns="auto_fit"
+            android:layout_marginTop="10dp"
             tools:listitem="@layout/item_event"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_status" />
+            app:layout_constraintTop_toBottomOf="@+id/sv_event" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

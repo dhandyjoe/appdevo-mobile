@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.GridLayout
 import android.widget.GridView
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project_kbm.R
@@ -37,6 +38,7 @@ class EventFragment : Fragment() {
     private var param2: String? = null
     private lateinit var binding: FragmentEventBinding
     private var eventList: ArrayList<ModelEvent>? = null
+    private var searchList: ArrayList<ModelEvent>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,6 +54,7 @@ class EventFragment : Fragment() {
     ): View {
         binding = FragmentEventBinding.inflate(inflater, container, false)
         eventList = DataEvents.getEventList()
+        searchList = DataEvents.getEventList()
 
         binding.rvShimmerEvent.showShimmer()
 
@@ -64,6 +67,7 @@ class EventFragment : Fragment() {
         }, 3000)
 
         showRecycleView()
+        searchEvent()
 
         return binding.root
     }
@@ -75,8 +79,34 @@ class EventFragment : Fragment() {
 
         data.setOnClickListener(object : EventsAdapter.OnClickListener {
             override fun onClick(position: Int, model: ModelEvent) {
-                val intent = Intent(context, EventDetailActivity::class.java)
+                val intent = Intent(activity, EventDetailActivity::class.java)
                 startActivity(intent)
+            }
+        })
+    }
+
+    private fun searchEvent() {
+        binding.svEvent.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                eventList!!.clear()
+                searchList!!.forEach {
+                    if (it.name.toLowerCase().contains(query!!.toLowerCase())) {
+                        eventList!!.add(it)
+                        showRecycleView()
+                    }
+                }
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                eventList!!.clear()
+                searchList!!.forEach {
+                    if (it.name.toLowerCase().contains(newText!!.toLowerCase())) {
+                        eventList!!.add(it)
+                        showRecycleView()
+                    }
+                }
+                return false
             }
         })
     }

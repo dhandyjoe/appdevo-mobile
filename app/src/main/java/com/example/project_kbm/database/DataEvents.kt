@@ -16,25 +16,25 @@ object DataEvents {
 
         val event2 = ModelEvent(
             R.drawable.isfest,
-            "Talkshow Information System Festival",
+            "asd Information System Festival",
             "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
         )
 
         val event3 = ModelEvent(
             R.drawable.isfest,
-            "Talkshow Information System Festival",
+            "qwe Information System Festival",
             "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
         )
 
         val event4 = ModelEvent(
             R.drawable.isfest,
-            "Talkshow Information System Festival",
+            "rqr Information System Festival",
             "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
         )
 
         val event5 = ModelEvent(
             R.drawable.isfest,
-            "Talkshow Information System Festival",
+            "ff Information System Festival",
             "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
         )
 

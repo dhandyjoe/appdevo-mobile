@@ -1,5 +1,7 @@
 package com.example.project_kbm.fragment
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -7,7 +9,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.project_kbm.R
 import com.example.project_kbm.activity.EventDetailActivity
 import com.example.project_kbm.activity.LoginActivity
 import com.example.project_kbm.activity.NewsDetailActivity
@@ -15,6 +21,8 @@ import com.example.project_kbm.adapter.NewsAdapter
 import com.example.project_kbm.database.DataNews
 import com.example.project_kbm.databinding.FragmentNewsBinding
 import com.example.project_kbm.model.ModelNews
+import java.util.*
+import kotlin.collections.ArrayList
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,7 +39,10 @@ class NewsFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var binding: FragmentNewsBinding
+    private lateinit var thisContext: Context
     private var newsList : ArrayList<ModelNews>? = null
+    private var displayLst: ArrayList<ModelNews>? = null
+    private lateinit var newText: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +56,9 @@ class NewsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        thisContext = container!!.context
         binding = FragmentNewsBinding.inflate(inflater, container, false)
+        displayLst = DataNews.getNewsList()
         newsList = DataNews.getNewsList()
         binding.rvShimmerNews.startShimmer()
 
@@ -56,7 +69,12 @@ class NewsFragment : Fragment() {
             binding.rvNews.visibility = View.VISIBLE
         }, 3000)
 
+
         showRecycleView()
+
+        spinnerNews()
+
+
 
         return binding.root
     }
@@ -73,6 +91,43 @@ class NewsFragment : Fragment() {
                 startActivity(intent)
             }
         })
+    }
+
+    private fun spinnerNews() {
+        val list = resources.getStringArray(R.array.spiiner_news)
+        val adapter = ArrayAdapter(thisContext, android.R.layout.simple_spinner_item, list)
+        binding.spNews.adapter = adapter
+
+        binding.spNews.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                if (position == 1) {
+                    newsList!!.clear()
+
+                    displayLst!!.forEach {
+                        if (it.nameCategory.contains(list[position])){
+                            newsList!!.add(it)
+                            showRecycleView()
+
+                        }
+                    }
+                } else {
+                    newsList = DataNews.getNewsList()
+                    showRecycleView()
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+        }
+
+
     }
 
     companion object {

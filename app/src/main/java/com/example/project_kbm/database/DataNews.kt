@@ -11,7 +11,7 @@ object DataNews {
             "Sekretaris Progdi S1 Teknik Informatika",
             "08 July 2021",
             "Informasi Administrasi FTI Selama PPKM ",
-            "Pengumuman Fakultas",
+            "Pengumuman Fakulasdtas",
             "Ditujukan bagi mahasiswa yang mengambil Tugas Akhir, berikut kami informasikan hal-hal penting terkait Wisuda Oktober tahun 2021:\\n\\n\n" +
                     "\n" +
                     "1. Prosedur Wisuda Oktober 2021, silahkan dapat dibaca di sini\n" +
@@ -36,7 +36,7 @@ object DataNews {
             "Sekretaris Progdi S1 Teknik Informatika",
             "08 July 2021",
             "Informasi Administrasi FTI Selama PPKM ",
-            "Pengumuman Fakultas",
+            "Pengumuman Fakuasdltas",
             "Ditujukan bagi mahasiswa yang mengambil Tugas Akhir, berikut kami informasikan hal-hal penting terkait Wisuda Oktober tahun 2021:\\n\\n\n" +
                     "\n" +
                     "1. Prosedur Wisuda Oktober 2021, silahkan dapat dibaca di sini\n" +
@@ -61,7 +61,7 @@ object DataNews {
             "Sekretaris Progdi S1 Teknik Informatika",
             "08 July 2021",
             "Informasi Administrasi FTI Selama PPKM ",
-            "Pengumuman Fakultas",
+            "Pengumuman Fakasdasultas",
             "Ditujukan bagi mahasiswa yang mengambil Tugas Akhir, berikut kami informasikan hal-hal penting terkait Wisuda Oktober tahun 2021:\\n\\n\n" +
                     "\n" +
                     "1. Prosedur Wisuda Oktober 2021, silahkan dapat dibaca di sini\n" +
@@ -136,7 +136,7 @@ object DataNews {
             "Sekretaris Progdi S1 Teknik Informatika",
             "08 July 2021",
             "Informasi Administrasi FTI Selama PPKM ",
-            "Pengumuman Fakultas",
+            "Pengumuman Fakasdasdultas",
             "Ditujukan bagi mahasiswa yang mengambil Tugas Akhir, berikut kami informasikan hal-hal penting terkait Wisuda Oktober tahun 2021:\\n\\n\n" +
                     "\n" +
                     "1. Prosedur Wisuda Oktober 2021, silahkan dapat dibaca di sini\n" +

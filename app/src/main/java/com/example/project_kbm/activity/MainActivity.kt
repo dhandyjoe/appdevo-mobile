@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttomNavigation.setItemSelected(R.id.menuNews, true)
-
         setupFragment(NewsFragment())
 
         // Replace Fragment

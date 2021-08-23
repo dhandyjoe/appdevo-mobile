@@ -14,19 +14,19 @@ object DataCommittee {
         )
 
         val committee2 = ModelCommittee(
-            "Youth Leadership",
+            "asd Leadership",
             "Youth Leadership merupakan program pengembangan skill kepemimpinan yang ditujukan untuk mahasiswa Indonesia.",
             "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
         )
 
         val committee3 = ModelCommittee(
-            "Youth Leadership",
+            "qwe Leadership",
             "Youth Leadership merupakan program pengembangan skill kepemimpinan yang ditujukan untuk mahasiswa Indonesia.",
             "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
         )
 
         val committee4 = ModelCommittee(
-            "Youth Leadership",
+            "zxc Leadership",
             "Youth Leadership merupakan program pengembangan skill kepemimpinan yang ditujukan untuk mahasiswa Indonesia.",
             "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
         )

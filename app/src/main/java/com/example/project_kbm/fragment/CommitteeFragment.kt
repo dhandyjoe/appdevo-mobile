@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project_kbm.R
@@ -34,6 +35,7 @@ class CommitteeFragment : Fragment() {
     private var param2: String? = null
     private lateinit var binding: FragmentCommitteeBinding
     private var committeeList: ArrayList<ModelCommittee>? = null
+    private var searchCommittee: ArrayList<ModelCommittee>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +51,7 @@ class CommitteeFragment : Fragment() {
     ): View? {
         binding = FragmentCommitteeBinding.inflate(inflater, container, false)
         committeeList = DataCommittee.getCommitteeList()
+        searchCommittee = DataCommittee.getCommitteeList()
 
         binding.rvShimmerCommittee.startShimmer()
 
@@ -61,6 +64,8 @@ class CommitteeFragment : Fragment() {
 
         showRecycleView()
 
+        searchEvent()
+
         return binding.root
     }
 
@@ -68,6 +73,32 @@ class CommitteeFragment : Fragment() {
         binding.rvCommittee.layoutManager = LinearLayoutManager(activity)
         val data = CommitteeAdapter(committeeList!!, requireActivity())
         binding.rvCommittee.adapter = data
+    }
+
+    private fun searchEvent() {
+        binding.svCommittee.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                committeeList!!.clear()
+                searchCommittee!!.forEach {
+                    if (it.nameCommittee.toLowerCase().contains(query!!.toLowerCase())) {
+                        committeeList!!.add(it)
+                        showRecycleView()
+                    }
+                }
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                committeeList!!.clear()
+                searchCommittee!!.forEach {
+                    if (it.nameCommittee.toLowerCase().contains(newText!!.toLowerCase())) {
+                        committeeList!!.add(it)
+                        showRecycleView()
+                    }
+                }
+                return false
+            }
+        })
     }
 
     companion object {

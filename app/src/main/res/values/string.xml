@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Buletin FTI</string>
+    <string name="coba">asdasdasdasdasdasd</string>
+    <string name="web_client_id">336202647292-t0ss8aaammn5l4f7v0q8p9m8b20spnau.apps.googleusercontent.com</string>
+    <string-array name="spiiner_news">
+        <item>All</item>
+        <item>Pengumuman Fakultas</item>
+    </string-array>
+</resources>

@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-
     <ImageView
-        android:id="@+id/icon"
+        android:id="@+id/iconfti"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/icon_fti"
