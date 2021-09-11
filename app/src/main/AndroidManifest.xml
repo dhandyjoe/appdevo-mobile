@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project_kbm">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,11 +10,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_fti_update_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Project_KBM">
+        android:theme="@style/Theme.Project_KBM"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.CommitteeDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.WebViewActionActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.NewsDetailActivity"
             android:exported="true" />
-        <activity android:name=".activity.EventDetailActivity" />
+        <activity
+            android:name=".activity.EventDetailActivity"
+            android:theme="@style/Theme.EventDetailTheme" />
         <activity android:name=".activity.ForgetPasswordActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.LoginActivity" />

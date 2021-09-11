@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
     android:padding="10dp">
 
     <TextView
@@ -19,18 +20,19 @@
 
     <TextView
         android:id="@+id/descCommittee"
-        android:layout_width="200dp"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
         android:text="Youth Leadership merupakan program pengembangan skill kepemimpinan yang ditujukan untuk mahasiswa Indonesia."
-        android:textSize="11sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_committee" />
 
     <Button
         android:id="@+id/btn_directLinkCommittee"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/purple_700"
         android:drawableLeft="@drawable/link"
         android:drawableTint="#fff"
@@ -39,5 +41,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#5D5A5A"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descCommittee" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

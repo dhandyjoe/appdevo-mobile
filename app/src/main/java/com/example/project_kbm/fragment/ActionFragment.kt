@@ -9,6 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.project_kbm.R
+import com.example.project_kbm.activity.MainActivity
+import com.example.project_kbm.activity.WebViewActionActivity
 import com.example.project_kbm.databinding.FragmentActionBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -49,6 +51,7 @@ class ActionFragment : Fragment() {
         binding.btnStars.setOnClickListener() {starsUKSW(thisContext)}
         binding.btnSiasat.setOnClickListener() {siasat(thisContext)}
         binding.btnRepo.setOnClickListener() {repoUKSW(thisContext)}
+        binding.btnSita.setOnClickListener() {sita(thisContext)}
 
         return binding.root
     }
@@ -99,20 +102,26 @@ class ActionFragment : Fragment() {
     }
 
     private fun starsUKSW(thisContext: Context?) {
-        val intent = Intent(Intent.ACTION_VIEW)
-        intent.data = Uri.parse("https://stars.uksw.edu/")
-        thisContext!!.startActivity(intent)
+        val intent = Intent(thisContext, WebViewActionActivity::class.java)
+        intent.putExtra("value", "https://stars.uksw.edu/")
+        startActivity(intent)
     }
 
     private fun siasat(thisContext: Context?) {
-        val intent = Intent(Intent.ACTION_VIEW)
-        intent.data = Uri.parse("https://siasat.uksw.edu/")
-        thisContext!!.startActivity(intent)
+        val intent = Intent(thisContext, WebViewActionActivity::class.java)
+        intent.putExtra("value", "https://siasat.uksw.edu/")
+        startActivity(intent)
     }
 
     private fun repoUKSW(thisContext: Context?) {
-        val intent = Intent(Intent.ACTION_VIEW)
-        intent.data = Uri.parse("https://repository.uksw.edu/")
-        thisContext!!.startActivity(intent)
+        val intent = Intent(thisContext, WebViewActionActivity::class.java)
+        intent.putExtra("value", "https://repository.uksw.edu/")
+        startActivity(intent)
+    }
+
+    private fun sita(thisContext: Context?) {
+        val intent = Intent(thisContext, WebViewActionActivity::class.java)
+        intent.putExtra("value", "http://online.fti.uksw.edu/")
+        startActivity(intent)
     }
 }

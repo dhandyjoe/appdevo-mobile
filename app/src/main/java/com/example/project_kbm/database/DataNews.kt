@@ -11,7 +11,7 @@ object DataNews {
             "Sekretaris Progdi S1 Teknik Informatika",
             "08 July 2021",
             "Informasi Administrasi FTI Selama PPKM ",
-            "Pengumuman Fakulasdtas",
+            "Pengumuman Fakultas",
             "Ditujukan bagi mahasiswa yang mengambil Tugas Akhir, berikut kami informasikan hal-hal penting terkait Wisuda Oktober tahun 2021:\\n\\n\n" +
                     "\n" +
                     "1. Prosedur Wisuda Oktober 2021, silahkan dapat dibaca di sini\n" +
@@ -33,10 +33,10 @@ object DataNews {
         )
 
         val news2 = ModelNews (
-            "Sekretaris Progdi S1 Teknik Informatika",
-            "08 July 2021",
-            "Informasi Administrasi FTI Selama PPKM ",
-            "Pengumuman Fakuasdltas",
+            "Koordinator Tugas AKhir",
+            "24 August 2021",
+            "Pendaftaran Tugas Akhir di SITA (D3 dan S1) Sem Ganjil 2021-2022",
+            "Pengumuman Tugas Akhir",
             "Ditujukan bagi mahasiswa yang mengambil Tugas Akhir, berikut kami informasikan hal-hal penting terkait Wisuda Oktober tahun 2021:\\n\\n\n" +
                     "\n" +
                     "1. Prosedur Wisuda Oktober 2021, silahkan dapat dibaca di sini\n" +
@@ -58,10 +58,10 @@ object DataNews {
         )
 
         val news3 = ModelNews (
-            "Sekretaris Progdi S1 Teknik Informatika",
-            "08 July 2021",
-            "Informasi Administrasi FTI Selama PPKM ",
-            "Pengumuman Fakasdasultas",
+            "YRB",
+            "06 August 2021",
+            "Perwalian Yos Richard Beeh",
+            "Pengumuman Dosen",
             "Ditujukan bagi mahasiswa yang mengambil Tugas Akhir, berikut kami informasikan hal-hal penting terkait Wisuda Oktober tahun 2021:\\n\\n\n" +
                     "\n" +
                     "1. Prosedur Wisuda Oktober 2021, silahkan dapat dibaca di sini\n" +
@@ -83,10 +83,10 @@ object DataNews {
         )
 
         val news4 = ModelNews (
-            "Sekretaris Progdi S1 Teknik Informatika",
-            "08 July 2021",
-            "Informasi Administrasi FTI Selama PPKM ",
-            "Pengumuman Fakultas",
+            "Koordinator Tugas AKhir",
+            "28 July 2021",
+            "Pencariran Nilai DT TA SEM Antara 2020-2021 ",
+            "Pengumuman Tugas Akhir",
             "Ditujukan bagi mahasiswa yang mengambil Tugas Akhir, berikut kami informasikan hal-hal penting terkait Wisuda Oktober tahun 2021:\\n\\n\n" +
                     "\n" +
                     "1. Prosedur Wisuda Oktober 2021, silahkan dapat dibaca di sini\n" +

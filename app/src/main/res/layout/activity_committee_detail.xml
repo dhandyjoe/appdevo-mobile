@@ -13,7 +13,7 @@
         tools:context=".activity.EventDetailActivity">
 
         <ImageView
-            android:id="@+id/iv_posterEvent"
+            android:id="@+id/iv_posterCommittee"
             android:layout_width="wrap_content"
             android:layout_height="280dp"
             android:background="@drawable/card_detail_event"
@@ -38,37 +38,29 @@
             android:layout_marginTop="-30dp"
             android:orientation="vertical"
             android:background="@drawable/border_event_detail"
-            app:layout_constraintTop_toBottomOf="@id/iv_posterEvent">
+            app:layout_constraintTop_toBottomOf="@id/iv_posterCommittee">
 
             <TextView
-                android:id="@+id/name_event"
+                android:id="@+id/name_committee"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:gravity="center"
-                android:text="Talkshow Information System Festival"
+                tools:text="Talkshow Information System Festival"
                 android:textColor="#000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btn_directLinkEvent"
+                android:id="@+id/btn_directLinkCommittee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#498623"
+                android:backgroundTint="@color/purple_700"
                 android:drawableLeft="@drawable/link"
+                android:layout_gravity="center"
                 android:drawableTint="#fff"
-                android:text="DIRECT LINK"
-                android:layout_gravity="center"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:text="@string/dummy_event"
-                android:padding="20dp"/>
+                android:text="DIRECT LINK"/>
 
             <TextView
                 android:layout_width="match_parent"

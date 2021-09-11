@@ -11,9 +11,12 @@ import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project_kbm.R
+import com.example.project_kbm.activity.CommitteeDetailActivity
 import com.example.project_kbm.activity.EventDetailActivity
 import com.example.project_kbm.adapter.CommitteeAdapter
 import com.example.project_kbm.adapter.EventsAdapter
+import com.example.project_kbm.database.Constants
+import com.example.project_kbm.database.Constants.COMMITTEE_DETAIL
 import com.example.project_kbm.database.DataCommittee
 import com.example.project_kbm.databinding.FragmentCommitteeBinding
 import com.example.project_kbm.model.ModelCommittee
@@ -60,7 +63,7 @@ class CommitteeFragment : Fragment() {
             binding.rvShimmerCommittee.stopShimmer()
             binding.rvShimmerCommittee.visibility = View.GONE
             binding.rvCommittee.visibility = View.VISIBLE
-        }, 3000)
+        }, 2000)
 
         showRecycleView()
 
@@ -73,6 +76,14 @@ class CommitteeFragment : Fragment() {
         binding.rvCommittee.layoutManager = LinearLayoutManager(activity)
         val data = CommitteeAdapter(committeeList!!, requireActivity())
         binding.rvCommittee.adapter = data
+
+        data.setOnClickListener(object : CommitteeAdapter.OnClickListener {
+            override fun onClick(position: Int, model: ModelCommittee) {
+                val intent = Intent(activity, CommitteeDetailActivity::class.java)
+                intent.putExtra(COMMITTEE_DETAIL, model)
+                startActivity(intent)
+            }
+        })
     }
 
     private fun searchEvent() {

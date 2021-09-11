@@ -11,31 +11,36 @@ object DataEvents {
         val event1 = ModelEvent(
             R.drawable.isfest,
             "Talkshow Information System Festival",
-            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
+            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform",
+            R.drawable.card_detail_event
         )
 
         val event2 = ModelEvent(
             R.drawable.isfest,
-            "asd Information System Festival",
-            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
+            "Tournament PES",
+            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform",
+            R.drawable.card_detail_event
         )
 
         val event3 = ModelEvent(
             R.drawable.isfest,
             "qwe Information System Festival",
-            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
+            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform",
+            R.drawable.card_detail_event
         )
 
         val event4 = ModelEvent(
             R.drawable.isfest,
             "rqr Information System Festival",
-            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
+            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform",
+            R.drawable.card_detail_event
         )
 
         val event5 = ModelEvent(
             R.drawable.isfest,
             "ff Information System Festival",
-            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform"
+            "https://docs.google.com/forms/d/e/1FAIpQLSdWQ_RlgT30piyBi2QAbgfT1uGcJ-TZwBq3B7Ai-NJLnJHiXA/viewform",
+            R.drawable.card_detail_event
         )
 
         eventList.add(event1)

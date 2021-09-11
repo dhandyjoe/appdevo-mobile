@@ -16,6 +16,7 @@ import com.example.project_kbm.R
 import com.example.project_kbm.activity.EventDetailActivity
 import com.example.project_kbm.adapter.EventsAdapter
 import com.example.project_kbm.adapter.NewsAdapter
+import com.example.project_kbm.database.Constants.EVENT_DETAIL
 import com.example.project_kbm.database.DataEvents
 import com.example.project_kbm.databinding.ActivityEventDetailBinding
 import com.example.project_kbm.databinding.FragmentEventBinding
@@ -64,7 +65,8 @@ class EventFragment : Fragment() {
             binding.rvShimmerEvent.hideShimmer()
             binding.rvShimmerEvent.visibility = View.GONE
             binding.rvEvent.visibility = View.VISIBLE
-        }, 3000)
+
+        }, 2000)
 
         showRecycleView()
         searchEvent()
@@ -80,6 +82,7 @@ class EventFragment : Fragment() {
         data.setOnClickListener(object : EventsAdapter.OnClickListener {
             override fun onClick(position: Int, model: ModelEvent) {
                 val intent = Intent(activity, EventDetailActivity::class.java)
+                intent.putExtra(EVENT_DETAIL, model)
                 startActivity(intent)
             }
         })

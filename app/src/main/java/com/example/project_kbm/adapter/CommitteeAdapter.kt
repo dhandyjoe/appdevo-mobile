@@ -28,6 +28,10 @@ class CommitteeAdapter(val data: ArrayList<ModelCommittee>, val context: Context
                 intent.data = Uri.parse(model.url)
                 context.startActivity(intent)
             }
+
+            holder.itemView.setOnClickListener {
+                onClickListener!!.onClick(position, model)
+            }
         }
     }
 

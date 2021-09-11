@@ -18,6 +18,7 @@ import com.example.project_kbm.activity.EventDetailActivity
 import com.example.project_kbm.activity.LoginActivity
 import com.example.project_kbm.activity.NewsDetailActivity
 import com.example.project_kbm.adapter.NewsAdapter
+import com.example.project_kbm.database.Constants.NEWS_DETAIL
 import com.example.project_kbm.database.DataNews
 import com.example.project_kbm.databinding.FragmentNewsBinding
 import com.example.project_kbm.model.ModelNews
@@ -67,7 +68,7 @@ class NewsFragment : Fragment() {
             binding.rvShimmerNews.stopShimmer()
             binding.rvShimmerNews.visibility = View.GONE
             binding.rvNews.visibility = View.VISIBLE
-        }, 3000)
+        }, 2000)
 
 
         showRecycleView()
@@ -115,6 +116,26 @@ class NewsFragment : Fragment() {
 
                         }
                     }
+                } else if (position == 2) {
+                    newsList!!.clear()
+
+                    displayLst!!.forEach {
+                        if (it.nameCategory.contains(list[position])){
+                            newsList!!.add(it)
+                            showRecycleView()
+
+                        }
+                    }
+                } else if (position == 3) {
+                    newsList!!.clear()
+
+                    displayLst!!.forEach {
+                        if (it.nameCategory.contains(list[position])){
+                            newsList!!.add(it)
+                            showRecycleView()
+
+                        }
+                    }
                 } else {
                     newsList = DataNews.getNewsList()
                     showRecycleView()
@@ -131,7 +152,6 @@ class NewsFragment : Fragment() {
     }
 
     companion object {
-        val NEWS_DETAIL = "news_detail"
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.

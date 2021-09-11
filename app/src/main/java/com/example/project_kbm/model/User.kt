@@ -1,6 +1,11 @@
 package com.example.project_kbm.model
 
+import android.os.Parcelable
+
 data class User(
-    var name: String,
-    var email: String
-)
+    val name: String = "",
+    val email: String = "",
+    val imageUrl: String = ""
+) {
+
+}

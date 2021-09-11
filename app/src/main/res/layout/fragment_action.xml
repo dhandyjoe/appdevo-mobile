@@ -7,54 +7,104 @@
     android:layout_margin="10dp"
     tools:context=".fragment.ActionFragment">
 
+    <View
+        android:layout_width="170dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="7dp"
+        android:background="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <TextView
         android:id="@+id/tv_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Action"
-        android:layout_marginTop="20dp"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_requestTranskrip"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Web Service UKSW"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_validasiPembayaran" />
+
+    <Button
+        android:id="@+id/btn_requestTranskrip"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/purple_200"
         android:text="request transkrip nilai"
+        app:layout_constraintEnd_toStartOf="@+id/btn_validasiPembayaran"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_status" />
 
     <Button
         android:id="@+id/btn_validasiPembayaran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/purple_200"
         android:text="Validasi Pembayaran"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_requestTranskrip" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_requestTranskrip"
+        app:layout_constraintTop_toTopOf="@+id/btn_requestTranskrip" />
 
     <Button
         android:id="@+id/btn_stars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ic_button_action"
         android:text="Stars Uksw"
+        app:layout_constraintEnd_toStartOf="@+id/btn_siasat"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_validasiPembayaran" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/btn_siasat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/ic_button_action"
         android:text="SIASAT"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_stars" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_stars"
+        app:layout_constraintTop_toTopOf="@+id/btn_stars" />
 
     <Button
         android:id="@+id/btn_repo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/ic_button_action"
         android:text="Repository UKSW"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_sita"
+        app:layout_constraintTop_toTopOf="@+id/btn_sita" />
+
+    <Button
+        android:id="@+id/btn_sita"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_button_action"
+        android:text="SITA / SIKP"
+        app:layout_constraintEnd_toStartOf="@+id/btn_repo"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_siasat" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_stars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

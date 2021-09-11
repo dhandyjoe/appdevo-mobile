@@ -31,7 +31,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
                         }
                     }
                     .addOnFailureListener {
-                        Toast.makeText(this, "Failure", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Failure!", Toast.LENGTH_SHORT).show()
                     }
             }
         }

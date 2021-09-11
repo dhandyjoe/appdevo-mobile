@@ -19,7 +19,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="90dp"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:text="Hello,"
             android:textColor="@color/purple_700"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
             android:layout_marginBottom="10dp"
             android:text="Sign Up!"
             android:textColor="@color/purple_700"
-            android:textSize="30sp"
+            android:textSize="33sp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -86,9 +86,28 @@
                 android:id="@+id/tv_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:hint="PASSWORD"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:id="@+id/tv_confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="CONFIRM PASSWORD"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/btn_register"
@@ -97,7 +116,5 @@
             android:backgroundTint="@color/purple_700"
             android:layout_marginTop="20dp"
             android:text="SIGN UP" />
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
