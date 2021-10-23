@@ -138,8 +138,8 @@ class LoginActivity : AppCompatActivity() {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
                 // Google Sign In was successful, authenticate with Firebase
-                val account = task.getResult(ApiException::class.java)!!
-                firebaseAuthWithGoogle(account.idToken!!)
+                val accounts = task.getResult(ApiException::class.java)!!
+                firebaseAuthWithGoogle(accounts.idToken!!)
                 Log.d("testGoogle", "success")
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
@@ -149,18 +149,27 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun account () {
-        firebaseDB.collection(DATA_USERS).document(userID!!).get()
-            .addOnSuccessListener {
-                val user = it.toObject(User::class.java)
+//        firebaseDB.collection(DATA_USERS).document(userID!!).get()
+//            .addOnSuccessListener {
+//                val user = it.toObject(User::class.java)
+//
+//                if (user == null) {
+//                    val signInAccount = firebaseAuth.currentUser
+//                    val name = signInAccount?.displayName.toString()
+//                    val email = signInAccount?.email.toString()
+//
+//                    val userAccount = User(name, email, "")
+//                    firebaseDB.collection(DATA_USERS).document(firebaseAuth.uid!!).set(userAccount)
+//                }
+//            }
 
-                if (user == null) {
-                    val signInAccount = GoogleSignIn.getLastSignedInAccount(this)
-                    val name = signInAccount?.displayName.toString()
-                    val email = signInAccount?.email.toString()
+        if (firebaseAuth.uid != null) {
+            val signInAccount = firebaseAuth.currentUser
+            val name = signInAccount?.displayName.toString()
+            val email = signInAccount?.email.toString()
 
-                    val userAccount = User(name, email, "")
-                    firebaseDB.collection(DATA_USERS).document(firebaseAuth.uid!!).set(userAccount)
-                }
-            }
+            val userAccount = User(name, email, "")
+            firebaseDB.collection(DATA_USERS).document(firebaseAuth.uid!!).set(userAccount)
+        }
     }
 }

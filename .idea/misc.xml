@@ -27,7 +27,7 @@
         <entry key="app/src/main/res/layout/activity_web_view_action.xml" value="0.14671052631578949" />
         <entry key="app/src/main/res/layout/bottom_sheet_layout.xml" value="0.12796052631578947" />
         <entry key="app/src/main/res/layout/fragment_action.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/fragment_committee.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/fragment_committee.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_event.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_event_bottom_sheet.xml" value="0.12796052631578947" />
         <entry key="app/src/main/res/layout/fragment_event_detail_sheet.xml" value="0.12796052631578947" />
