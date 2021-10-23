@@ -22,6 +22,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Talkshow Information System Festival"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +36,7 @@
         android:drawableLeft="@drawable/link"
         android:drawableTint="#fff"
         android:text="DIRECT LINK"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_nameEvent" />

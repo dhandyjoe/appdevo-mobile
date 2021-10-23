@@ -93,7 +93,7 @@ class EventFragment : Fragment() {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 eventList!!.clear()
                 searchList!!.forEach {
-                    if (it.name.toLowerCase().contains(query!!.toLowerCase())) {
+                    if (it.name!!.toLowerCase().contains(query!!.toLowerCase())) {
                         eventList!!.add(it)
                         showRecycleView()
                     }
@@ -104,7 +104,7 @@ class EventFragment : Fragment() {
             override fun onQueryTextChange(newText: String?): Boolean {
                 eventList!!.clear()
                 searchList!!.forEach {
-                    if (it.name.toLowerCase().contains(newText!!.toLowerCase())) {
+                    if (it.name!!.toLowerCase().contains(newText!!.toLowerCase())) {
                         eventList!!.add(it)
                         showRecycleView()
                     }

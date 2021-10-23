@@ -91,7 +91,7 @@ class CommitteeFragment : Fragment() {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 committeeList!!.clear()
                 searchCommittee!!.forEach {
-                    if (it.nameCommittee.toLowerCase().contains(query!!.toLowerCase())) {
+                    if (it.nameCommittee!!.toLowerCase().contains(query!!.toLowerCase())) {
                         committeeList!!.add(it)
                         showRecycleView()
                     }
@@ -102,7 +102,7 @@ class CommitteeFragment : Fragment() {
             override fun onQueryTextChange(newText: String?): Boolean {
                 committeeList!!.clear()
                 searchCommittee!!.forEach {
-                    if (it.nameCommittee.toLowerCase().contains(newText!!.toLowerCase())) {
+                    if (it.nameCommittee!!.toLowerCase().contains(newText!!.toLowerCase())) {
                         committeeList!!.add(it)
                         showRecycleView()
                     }

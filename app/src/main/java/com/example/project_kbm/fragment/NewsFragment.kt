@@ -110,7 +110,7 @@ class NewsFragment : Fragment() {
                     newsList!!.clear()
 
                     displayLst!!.forEach {
-                        if (it.nameCategory.contains(list[position])){
+                        if (it.nameCategory!!.contains(list[position])){
                             newsList!!.add(it)
                             showRecycleView()
 
@@ -120,7 +120,7 @@ class NewsFragment : Fragment() {
                     newsList!!.clear()
 
                     displayLst!!.forEach {
-                        if (it.nameCategory.contains(list[position])){
+                        if (it.nameCategory!!.contains(list[position])){
                             newsList!!.add(it)
                             showRecycleView()
 
@@ -130,7 +130,7 @@ class NewsFragment : Fragment() {
                     newsList!!.clear()
 
                     displayLst!!.forEach {
-                        if (it.nameCategory.contains(list[position])){
+                        if (it.nameCategory!!.contains(list[position])){
                             newsList!!.add(it)
                             showRecycleView()
 

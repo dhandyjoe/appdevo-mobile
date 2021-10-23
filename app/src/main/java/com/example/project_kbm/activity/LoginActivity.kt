@@ -1,11 +1,13 @@
 package com.example.project_kbm.activity
 
+import android.app.Activity
 import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.project_kbm.R
 import com.example.project_kbm.database.Constants
 import com.example.project_kbm.database.Constants.DATA_USERS
@@ -94,6 +96,7 @@ class LoginActivity : AppCompatActivity() {
     private fun signInGmail() {
         val signInIntent = mGoogleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
+//        resultLauncher.launch(signInIntent)
     }
 
     private fun firebaseAuthWithGoogle(idToken: String) {
@@ -112,6 +115,21 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+//    var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+//        if (it.resultCode == Activity.RESULT_OK) {
+//            val task = GoogleSignIn.getSignedInAccountFromIntent(it.data)
+//            try {
+//                // Google Sign In was successful, authenticate with Firebase
+//                val account = task.getResult(ApiException::class.java)!!
+//                firebaseAuthWithGoogle(account.idToken!!)
+//                Log.d("testGoogle", "success")
+//            } catch (e: ApiException) {
+//                // Google Sign In failed, update UI appropriately
+//                Log.w(TAG, "Google sign in failed", e)
+//            }
+//        }
+//    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -122,7 +140,7 @@ class LoginActivity : AppCompatActivity() {
                 // Google Sign In was successful, authenticate with Firebase
                 val account = task.getResult(ApiException::class.java)!!
                 firebaseAuthWithGoogle(account.idToken!!)
-
+                Log.d("testGoogle", "success")
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e)

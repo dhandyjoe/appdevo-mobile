@@ -8,7 +8,6 @@ import android.util.Log
 import android.widget.Toast
 import com.example.project_kbm.R
 import com.example.project_kbm.database.Constants.DATA_USERS
-import com.example.project_kbm.database.Constants.RC_SIGN_IN
 import com.example.project_kbm.databinding.ActivityRegisterBinding
 import com.example.project_kbm.model.User
 import com.google.android.gms.auth.api.signin.GoogleSignIn
