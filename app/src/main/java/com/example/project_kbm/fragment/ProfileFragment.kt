@@ -87,7 +87,6 @@ class SettingFragment : Fragment() {
 
         mGoogleSignInClient = GoogleSignIn.getClient(activity, gso)
 
-
         binding.btnLogout.setOnClickListener {
             showAlertLogout()
         }
@@ -176,6 +175,7 @@ class SettingFragment : Fragment() {
                     startActivity(intent)
                     activity?.finish()
                 }
+            Firebase.auth.signOut()
         })
 
         alert.setNegativeButton("No") { dialog, which ->
