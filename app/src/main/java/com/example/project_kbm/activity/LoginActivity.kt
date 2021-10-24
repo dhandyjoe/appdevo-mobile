@@ -107,6 +107,7 @@ class LoginActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     account()
                     startActivity(Intent(this, MainActivity::class.java))
+                    Log.d("testGoogleLogin", "successLogin")
                     finish()
                 } else {
                     // If sign in fails, display a message to the user.
