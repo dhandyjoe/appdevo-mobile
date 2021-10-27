@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:336202647292:android:22b4e1d69c3150adf83979",
+        "mobilesdk_app_id": "1:336202647292:android:be0d54411420877cf83979",
         "android_client_info": {
           "package_name": "com.example.project_kbm"
         }
@@ -35,7 +35,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "336202647292-t0ss8aaammn5l4f7v0q8p9m8b20spnau.apps.googleusercontent.com",
+              "client_id": "336202647292-7vasftc8dibbeuc5goskcgc5lr4om38p.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

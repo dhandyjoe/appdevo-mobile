@@ -66,7 +66,7 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-auth-ktx'
 
-    // Also declare the dependency for the Google Play services library and specify its version
+    // Also declare t he dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
 
     // Declare the dependency for the Cloud Firestore library
